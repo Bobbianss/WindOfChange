@@ -30,4 +30,5 @@
 *.exe
 *.out
 *.app
-/[Ll]ibrary/
+#Project
+Library/*
