@@ -25,7 +25,7 @@ MonoBehaviour:
         m_PostInfinity: 0
         m_RotationOrder: 0
   - m_From: Fly view
-    m_To: Npc 1 cam
+    m_To: Npc Dialogue cam
     m_Blend:
       m_Style: 1
       m_Time: 2
@@ -46,7 +46,7 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
-  - m_From: Npc 1 cam
+  - m_From: Npc Dialogue cam
     m_To: Fly view
     m_Blend:
       m_Style: 1
@@ -58,7 +58,7 @@ MonoBehaviour:
         m_PostInfinity: 0
         m_RotationOrder: 0
   - m_From: PlayerDialogue_Cam
-    m_To: Npc 1 cam
+    m_To: Npc Dialogue cam
     m_Blend:
       m_Style: 0
       m_Time: 2
@@ -68,7 +68,7 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
-  - m_From: Npc 1 cam
+  - m_From: Npc Dialogue cam
     m_To: PlayerDialogue_Cam
     m_Blend:
       m_Style: 0

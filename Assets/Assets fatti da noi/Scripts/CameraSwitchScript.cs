@@ -8,7 +8,7 @@ public class CameraSwitchScript : MonoBehaviour
     //defines the virtual cameras
     public CinemachineVirtualCamera playerCamera;
     public CinemachineVirtualCamera npcCamera;
-    public CinemachineVirtualCamera gameCamera;
+    public CinemachineFreeLook gameCamera;
 
 
     // Start is called before the first frame update
