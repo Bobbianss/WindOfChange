@@ -8,6 +8,7 @@ TagManager:
   - NPC
   - Oggetto da raccogliere
   - Cestino
+  - Acqua
   layers:
   - Default
   - TransparentFX

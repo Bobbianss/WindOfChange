@@ -141,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay(Collider collision)
     {
-        if (collision.gameObject.GetComponent<Sea>())
+        if (collision.gameObject.tag == "Acqua")
         {
             waterTimeSpentIn += (Time.deltaTime / waterPushTime);
             gabbiano.AddForce(Vector3.up * Mathf.Pow(waterTimeSpentIn, 2) * waterPush);
@@ -155,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
             windTaken = windTaken - collision.gameObject.GetComponent<Wind>().WindForce();
         }
 
-        if (collision.gameObject.GetComponent<Sea>())
+        if (collision.gameObject.tag == "Acqua")
         {
             waterTimeSpentIn = 0;
         }
