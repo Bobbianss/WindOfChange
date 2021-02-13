@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 3162956141419991045}
   - component: {fileID: 3162956141419991047}
   - component: {fileID: 3162956141419991044}
+  - component: {fileID: 1162869839}
   m_Layer: 0
   m_Name: MangerAudio
   m_TagString: Untagged
@@ -90,7 +91,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.12
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -173,3 +174,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!168 &1162869839
+AudioEchoFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3162956141419991050}
+  m_Enabled: 1
+  m_Delay: 150
+  m_DecayRatio: 0.4
+  m_WetMix: 0.1
+  m_DryMix: 1
