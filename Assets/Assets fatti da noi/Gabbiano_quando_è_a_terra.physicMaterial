@@ -6,7 +6,7 @@ PhysicMaterial:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Gabbiano_quando_\xE8_a_terra"
+  m_Name: "Gabbiano_quando_e\u0300_a_terra"
   dynamicFriction: 0
   staticFriction: 0
   bounciness: 0
