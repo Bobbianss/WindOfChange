@@ -9,6 +9,7 @@ TagManager:
   - Oggetto da raccogliere
   - Cestino
   - Acqua
+  - Terreno
   layers:
   - Default
   - TransparentFX

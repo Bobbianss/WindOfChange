@@ -6,7 +6,7 @@ public class HungerSystem : MonoBehaviour
 {
     private PlayerMovement playerMov;
     // private PlayerAnimationManager animation;
-    private float satiety;
+    public float satiety;
     public float hungerThreshold;
     public float satietyMax;
     public float satietyMin;
@@ -17,6 +17,7 @@ public class HungerSystem : MonoBehaviour
     {
         InvokeRepeating("Penalize", 0.5f, 0.5f);
         playerMov = GetComponent<PlayerMovement>();
+		satiety = startSatiety;
     }
 
 

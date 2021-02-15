@@ -9,14 +9,22 @@ public class PlayerMovement : MonoBehaviour
     public Camera cam;
     public Rigidbody gabbiano;
     public bool penalty = false;
-    //PauseMenu pauseMenu;               //scollegato
-    //private float viewSensitivity;     //scollegato
-    public bool isWalkingNotFlying;
-    public bool canFly;
-    //terra
-    public float jumpForce = 100f;
+	//PauseMenu pauseMenu;               //scollegato
+	//private float viewSensitivity;     //scollegato
+
+	//Permessi
+	public bool _flyPermission;
+	public bool _movePermission;
+	//gestione terra-aria
+	public bool isWalkingNotFlying;
+	private bool canLand = true;
+	public float landingHeight = 1f;
+	public float groundingHeight = 1f;
+	public float rayVertOffset = 1f;
+	public float noLandingTime = 1f;
+	//terra
+	public float jumpForce = 100f;
     public float walkForce = 10f;
-    public float feetOffset = 1f;
     //aria
     public GameObject backFin; //rigidbody che tiene il gabbiano dritto in volo
     public Vector3 dragBody;
@@ -27,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public float propulsion = 1000f;
     public float portanza;
     private Vector3 windTaken;
-    //acqua (mobbasta elementi)
+    //acqua                                    (mobbasta elementi)
     public float waterPush = 50f;
     public float waterPushTime = 2f;
     private float waterTimeSpentIn = 0f;
@@ -41,25 +49,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update() //usato per controllare quando saltare, quando camminare e quando volare
     {
-        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space) && isWalkingNotFlying)
+		
+		if (IsGrounded() && Input.GetKeyDown(KeyCode.Space) && isWalkingNotFlying && _flyPermission)
         {
-            //Debug.Log("JumpMethod");
             Jump();
-        }
+			TakeOff();
+			StartCoroutine(TurnOffLandingForSeconds(noLandingTime));
+		}
 
-        if (!IsGrounded() && Input.GetMouseButtonDown(0) && isWalkingNotFlying && canFly)
-        {
-            TakeOff();
-        }
-
-
-
-        //Debug.Log("Is grounded " + IsGrounded() + "  Is walking " + isWalkingNotFlying + "  Can fly " + canFly + "  Wind taken " + windTaken);
-    }
+		LandOnLowAltitude();
+		//Debug.Log("Is grounded " + IsGrounded() + "  Is walking " + isWalkingNotFlying + "  Can fly " + canFly + "  Wind taken " + windTaken);
+	}
 
     void FixedUpdate()
         {
-            if (isWalkingNotFlying)
+            if (isWalkingNotFlying && _movePermission)
             {
                 WalkPhysics();
             }
@@ -74,13 +78,28 @@ public class PlayerMovement : MonoBehaviour
         gabbiano.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 
-    private bool IsGrounded() //controlla se si sta toccando terra SERVE SOLO PER SALTARE
+    private bool IsGrounded() //controlla se si sta toccando terra serve per saltare
     {
-        Debug.DrawRay(transform.position - (Vector3.up * feetOffset), -Vector3.up);
-        return Physics.Raycast(transform.position-(Vector3.up*feetOffset), -Vector3.up, 0.1f);
-    } 
+        Debug.DrawRay(				transform.position-(Vector3.up*rayVertOffset), -Vector3.up * groundingHeight, Color.black);
+		return Physics.Raycast(		transform.position-(Vector3.up*rayVertOffset),-Vector3.up, groundingHeight);
+    }
 
-    private void Land() //fa atterrare il gabbiano
+	private void LandOnLowAltitude() //controlla l'altezza del gabbiano per atterrare
+	{
+		if (canLand)
+		{
+
+			bool rayHasHit = Physics.Raycast(transform.position - (Vector3.up * rayVertOffset), -Vector3.up, out RaycastHit landingRay, landingHeight);
+			Debug.DrawRay(transform.position - (Vector3.up * rayVertOffset), -Vector3.up * landingHeight, Color.cyan);
+
+			if( (rayHasHit) && landingRay.collider.tag == "Terreno" )
+			{
+				Land();
+			}
+		}
+	}
+
+	private void Land() //fa atterrare il gabbiano
     {      
         gabbiano.useGravity = true;
         //backFin.SetActive(false); //spegne pinna caudale
@@ -90,7 +109,6 @@ public class PlayerMovement : MonoBehaviour
     private void TakeOff() //serve davvero?
     {
         gabbiano.useGravity = false;
-        //backFin.SetActive(true); //spegne pinna caudale
         isWalkingNotFlying = false;
     }
 
@@ -129,14 +147,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.GetComponent<Wind>())
         {
             windTaken = windTaken + collision.gameObject.GetComponent<Wind>().WindForce();
-        }
-
-        if (collision.gameObject.GetComponent<LandingZone>())
-        {
-            canFly = collision.gameObject.GetComponent<LandingZone>().canFly;
-            Land();
-        }
-        
+        }        
     }
 
     private void OnTriggerStay(Collider collision)
@@ -162,4 +173,10 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+	IEnumerator TurnOffLandingForSeconds(float time)
+	{
+		canLand = false;
+		yield return new WaitForSeconds(time);
+		canLand = true;
+	}
 }
