@@ -15,7 +15,7 @@ public class GatherLeavesScript : MonoBehaviour
 		if (collision.gameObject.tag == "Player" && gatherLeavesManager._gatherPermission!=false)
 		{
 			Object.Destroy(this.gameObject);
-			GatherLeavesManagerScript.countLeaves += 1;
+			GatherLeavesManagerScript.countLeaves = GatherLeavesManagerScript.countLeaves + 1;
 		}
 	}
 
