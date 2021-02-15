@@ -15,7 +15,7 @@ public class GamePermissionsManager : MonoBehaviour
 		set => FindObjectOfType<PlayerMovement>()._flyPermission = value;
 	}
 
-	public bool MovePermission
+	public static bool MovePermission
 	{
 		get => FindObjectOfType<PlayerMovement>()._movePermission;
 

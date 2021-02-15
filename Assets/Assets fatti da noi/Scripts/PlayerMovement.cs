@@ -62,16 +62,20 @@ public class PlayerMovement : MonoBehaviour
 	}
 
     void FixedUpdate()
-        {
-            if (isWalkingNotFlying && _movePermission)
-            {
-                WalkPhysics();
-            }
-            else
-            {
-                FlyPhysics();
-            }          
-        }  //dove vengono applicate tutte le forze tranne quella di salto
+    {
+		if (GamePermissionsManager.MovePermission)
+		{
+			if (isWalkingNotFlying)
+			{
+				WalkPhysics();
+			}
+			else
+			{
+				FlyPhysics();
+			}
+		}
+		       
+    }  //dove vengono applicate tutte le forze tranne quella di salto
 
     private void Jump() //applica la forza di salto
     {
