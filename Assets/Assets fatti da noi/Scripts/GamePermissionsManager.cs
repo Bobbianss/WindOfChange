@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GamePermissionsManager : MonoBehaviour
 {
-	GameObject tartaruga;
+	GameObject tartaruga1;
+	GameObject tartaruga2;
 	GameObject umano;
 	GameObject capitano;
 
@@ -38,11 +39,18 @@ public class GamePermissionsManager : MonoBehaviour
 		set => FindObjectOfType<PickUpObject>()._pickUpPermission = value;
 	}
 
-	public bool talkPermissionTartaruga
+	public bool talkPermissionTartaruga1
 	{
-		get => tartaruga.GetComponent<Collider>().enabled;
-		set => tartaruga.GetComponent<Collider>().enabled = value;
+		get => tartaruga1.GetComponent<Collider>().enabled;
+		set => tartaruga1.GetComponent<Collider>().enabled = value;
 	}
+
+	public bool talkPermissionTartaruga2
+	{
+		get => tartaruga2.GetComponent<Collider>().enabled;
+		set => tartaruga2.GetComponent<Collider>().enabled = value;
+	}
+
 	public bool talkPermissionUmano
 	{
 		get => umano.GetComponent<Collider>().enabled;
