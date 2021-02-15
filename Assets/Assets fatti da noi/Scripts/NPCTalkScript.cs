@@ -14,7 +14,7 @@ public class NPCTalkScript : MonoBehaviour
 
     // interface
     DialogueSystemScript dialogueSystem;
-
+	
     // Start is called before the first frame update
     void Start()
     {

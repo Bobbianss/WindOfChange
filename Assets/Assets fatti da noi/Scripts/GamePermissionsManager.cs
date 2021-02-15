@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class GamePermissionsManager : MonoBehaviour
 {
+	GameObject tartaruga;
+	GameObject umano;
+	GameObject capitano;
+
 	//QUESTA CLASSE è L'INTERFACCIA CHE IL GAME MANAGER USA PER GESTIRE I PERMESSI DI GIOCO
 	public bool FlyPermission
 	{
 		get => FindObjectOfType<PlayerMovement>()._flyPermission;
-
 		set => FindObjectOfType<PlayerMovement>()._flyPermission = value;
 	}
 
@@ -19,12 +22,14 @@ public class GamePermissionsManager : MonoBehaviour
 		set => FindObjectOfType<PlayerMovement>()._movePermission = value;
 	}
 
-	/*
-	public bool gatherPermission
+	
+	public static bool gatherPermission
 	{
-		//todo
+		get => FindObjectOfType<GatherLeavesManagerScript>()._gatherPermission;
+		set => FindObjectOfType<GatherLeavesManagerScript>()._gatherPermission = value;
+
 	}
-	*/
+	
 
 	public bool PickUpPermission
 	{
@@ -33,11 +38,21 @@ public class GamePermissionsManager : MonoBehaviour
 		set => FindObjectOfType<PickUpObject>()._pickUpPermission = value;
 	}
 
-	/*
-	public bool talkPermission
+	public bool talkPermissionTartaruga
 	{
-		//todo
+		get => tartaruga.GetComponent<Collider>().enabled;
+		set => tartaruga.GetComponent<Collider>().enabled = value;
 	}
-	*/
+	public bool talkPermissionUmano
+	{
+		get => umano.GetComponent<Collider>().enabled;
+		set => umano.GetComponent<Collider>().enabled = value;
+	}
+	public bool talkPermissionCapitano
+	{
+		get => capitano.GetComponent<Collider>().enabled;
+		set => capitano.GetComponent<Collider>().enabled = value;
+	}
+	
 
 }
