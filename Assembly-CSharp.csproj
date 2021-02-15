@@ -68,6 +68,7 @@
     <Compile Include="Assets\Assets fatti da noi\Scripts\DialogueAudioScript.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\DialogueContentManagerScript.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\DialogueSystemScript.cs" />
+    <Compile Include="Assets\Assets fatti da noi\Scripts\EventsScript.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\Fish.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\Flock_fish.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\GamePermissionsManager.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Assets\Assets fatti da noi\Scripts\PickUpObject.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\SoundManagerScript.cs" />
+    <Compile Include="Assets\Assets fatti da noi\Scripts\StateInformation.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\TempBussola.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\Wind.cs" />
     <Compile Include="Assets\MapManagerMaster.cs" />
