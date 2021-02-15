@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class GatherLeavesManagerScript : MonoBehaviour
 {
-	public static int countLeaves;
-	public bool _gatherPermission=false;
-	
-	public  int countLeavesDestroyed()
+	public static int countLeaves
 	{
-		return countLeaves;
+		get => countLeaves;
+
+		set
+		{
+			countLeaves = value;
+			if(countLeaves == 10)
+			{
+				GameState.AdvanceState();
+			}
+		}
 	}
+	public bool _gatherPermission = false;
+
+	
 }

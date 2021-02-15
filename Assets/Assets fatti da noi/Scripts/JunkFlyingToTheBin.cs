@@ -30,7 +30,14 @@ public class JunkFlyingToTheBin : MonoBehaviour
 			float parabula = ((4f * parabulaVar) - (4f * Mathf.Pow(parabulaVar,2f))) * throwHeight ; 
 			this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y+parabula, this.gameObject.transform.position.z);
 			if (parabulaVar <= 0.001f)
+			{
+				if (FindObjectOfType<JunkFlyingToTheBin>() == null) //funziona?
+				{
+					GameState.AdvanceState();
+				}
 				Destroy(this.gameObject);
+			}
+				
 		}
 		
     }
