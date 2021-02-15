@@ -9,6 +9,5 @@ public class PickUpCollisionTriggerer : MonoBehaviour
 	private void OnTriggerEnter(Collider maybeJunk)
 	{
 		pickUpScript.OnTriggererCollisionEnter(maybeJunk);
-		Debug.Log("Il becco ha avuto la collisione");
 	}
 }

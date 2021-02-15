@@ -8,7 +8,8 @@ public class PickUpObject : MonoBehaviour
 	GameObject thing;
 	public Animator animator;
 	public float pickUpRecoveryTime;
-	public bool pickUpInput;
+	private bool pickUpInput;
+	public bool _pickUpPermission;
 	private bool canPickUp = true;
 
 
@@ -25,7 +26,7 @@ public class PickUpObject : MonoBehaviour
 		animator.SetBool("Input raccolta", false);
 
 
-		if (pickUpInput)
+		if (pickUpInput && _pickUpPermission)
 		{
 			if(thing == null)
 			{
@@ -34,13 +35,10 @@ public class PickUpObject : MonoBehaviour
 					animator.SetBool("Input raccolta",true);
 					TurnOffColliderAndPickupForSeconds(pickUpRecoveryTime);
 				}
-				
-				Debug.Log("prendo");
 			}
 			else
 			{
 				DropThing();
-				Debug.Log("Lascio");
 			}
 		}
     }
@@ -84,14 +82,10 @@ public class PickUpObject : MonoBehaviour
 	
 	private void MaybeDropTheJunk(Collider maybeBinArea)
 	{
-		Debug.Log("check 1");
-
 		if (thing != null && maybeBinArea.tag == "Cestino")
 		{
-			Debug.Log("check 2");
 			if (thing.GetComponent<JunkScript>().junkTag == maybeBinArea.gameObject.GetComponent<JunkScript>().junkTag)
 			{
-				Debug.Log("check 3");
 				DunkTheJunk();
 			}
 		}
