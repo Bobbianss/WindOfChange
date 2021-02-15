@@ -39,6 +39,13 @@ public class GamePermissionsManager : MonoBehaviour
 		set => FindObjectOfType<PickUpObject>()._pickUpPermission = value;
 	}
 
+	public bool CollectObjectPermission
+	{
+		get => FindObjectOfType<ObjectCollect>()._objectCollectPermission;
+
+		set => FindObjectOfType<ObjectCollect>()._objectCollectPermission = value;
+	}
+
 	public bool talkPermissionTartaruga1
 	{
 		get => tartaruga1.GetComponent<Collider>().enabled;
