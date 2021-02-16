@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1065717161224099921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1272543258325043144}
+  m_Layer: 0
+  m_Name: Ago correct
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1272543258325043144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065717161224099921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0028152466, y: 0.2685852, z: -0.0065956116}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 770912119588635217}
+  m_Father: {fileID: 5817424163367745387}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2384181956569985459
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,13 +56,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2384181956569985459}
-  m_LocalRotation: {x: -0.6924234, y: -0.14335246, z: -0.14335223, w: 0.69242334}
-  m_LocalPosition: {x: -0, y: -0.05826646, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.08741039}
+  m_LocalRotation: {x: -0.6528248, y: -0.271698, z: -0.271698, w: 0.6528248}
+  m_LocalPosition: {x: 0.0028152466, y: -0.3268509, z: 0.0065956116}
+  m_LocalScale: {x: 1, y: 1, z: 0.08741038}
   m_Children: []
-  m_Father: {fileID: 5817424163367745387}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -23.393002}
+  m_Father: {fileID: 1272543258325043144}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90.00001, y: -21.8, z: -23.393002}
 --- !u!33 &7941710095987949713
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -186,7 +217,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 795915040442321585}
-  - {fileID: 770912119588635217}
+  - {fileID: 1272543258325043144}
   - {fileID: 8735098948269885228}
   - {fileID: 1842966125099391812}
   m_Father: {fileID: 0}
@@ -288,7 +319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8735098948269885228
 Transform:
   m_ObjectHideFlags: 0

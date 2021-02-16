@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 	//terra
 	public float jumpForce = 100f;
     public float walkForce = 10f;
+	public float backFinWalkForceFactor = 1f;
     //aria
     public GameObject backFin; //rigidbody che tiene il gabbiano dritto in volo
     public Vector3 dragBody;
@@ -118,16 +119,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void WalkPhysics() //usa i controlli per far camminare il gabbiano con WASD
     {
-        Vector3 forward = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up).normalized;   //proietta camera.forward e camera.right sul piano XZ, li normalizza.
+		//backFin.GetComponent<Rigidbody>().isKinematic = true;
+		//gabbiano.isKinematic = true;
+		Vector3 forward = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up).normalized;   //proietta camera.forward e camera.right sul piano XZ, li normalizza.
         Vector3 right = Vector3.ProjectOnPlane(cam.transform.right, Vector3.up).normalized;
-        Vector3 walk = forward * Input.GetAxis("Vertical") + right * Input.GetAxis("Horizontal");
-        gabbiano.AddForce(walkForce * walk);//li usa per applicare forze proporzionali agli axis horizontal e vertical.
-        
+        Vector3 walkDir = forward * Input.GetAxis("Vertical") + right * Input.GetAxis("Horizontal");
+		gabbiano.AddForce(walkForce * walkDir);//li usa per applicare forze proporzionali agli axis horizontal e vertical.
+		backFin.GetComponent<Rigidbody>().AddForce(-1f * walkDir * walkForce * backFinWalkForceFactor);
+		//gabbiano.MovePosition(gabbiano.position + walkDir * walkForce);
+		//gabbiano.MoveRotation(Quaternion.LookRotation(walkDir, Vector3.up));
     } 
 
     private void FlyPhysics() //Quando si vola, questo metodo calcola la forza totale sul gabbiano.
     {
-        Vector3 totalFlyForce = Vector3.zero;
+	
+		Vector3 totalFlyForce = Vector3.zero;
 
         Vector3 flowVelocityG = -gabbiano.velocity + (windTaken * windInfluence); //https://en.wikipedia.org/wiki/Flow_velocity
         Vector3 flowVelocityL = gabbiano.transform.InverseTransformVector(flowVelocityG);
