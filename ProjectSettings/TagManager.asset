@@ -10,6 +10,7 @@ TagManager:
   - Cestino
   - Acqua
   - Terreno
+  - Map
   layers:
   - Default
   - TransparentFX
