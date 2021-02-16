@@ -752,6 +752,7 @@
     <Compile Include="Assets\Assets fatti da noi\Scripts\JunkFlyingToTheBin.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\JunkScript.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\LandingZone.cs" />
+    <Compile Include="Assets\Assets fatti da noi\Scripts\LeaveRotation.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\MapManagerMaster.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\MapPageManager.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\ModelYawAndPitch.cs" />
@@ -765,6 +766,7 @@
     <Compile Include="Assets\Assets fatti da noi\Scripts\TempBussola.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\TriggerCambioTartaruga.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\Wind.cs" />
+    <Compile Include="Assets\CancellamiOverlaytest.cs" />
     <Compile Include="Assets\ObjectCollect.cs" />
     <Compile Include="Assets\Scripts\Input\GameInput.cs" />
     <Compile Include="Assets\Shaders\ScriptableRenderFeatures\DepthNormalsFeature.cs" />
