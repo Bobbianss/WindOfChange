@@ -4,8 +4,15 @@ Akamai # Beh, ti servirà aiuto, almeno una petizione.
 Eerf # Lo devo fare io? 
 Akamai # E chi se no? 
 Eerf # ... ... 
-Akamai # Non sai quanta rabbia ho verso gli umani. Ma sono vecchia, se cominciassi a girare il mondo finirei esausta arenata in qualche spiaggia. Serve qualcuno giovane, forte, che possa cavalcare le correnti in giro per il mondo. Saranno venti di cambiamento, venti di speranza. 
+Akamai # Non sai quanta rabbia ho verso gli umani. Ma sono vecchia, 
+Akamai # se cominciassi a girare il mondo finirei esausta arenata in qualche spiaggia. 
+Akamai # Serve qualcuno giovane, forte, che possa cavalcare le correnti in giro per il mondo. 
+Akamai # Saranno venti di cambiamento, venti di speranza. 
 Eerf # ... ... 
-Akamai # Non sarà facile. Ma credimi, è molto più difficile rimanere qui, a vedere casa tua venir distrutta a poco a poco. A vedere i tuoi amici scomparire senza sapere perché. O ancora peggio, sapendo che è causa loro. 
+Akamai # Non sarà facile. Ma credimi, è molto più difficile rimanere qui, a vedere casa tua venir distrutta a poco a poco. 
+Akamai # A vedere i tuoi amici scomparire senza sapere perché. O ancora peggio, sapendo che è causa loro. 
 Eerf # Una petizione? E chi la potrebbe firmare AKAMAI? Io non mi sono mai allontanato dall'isola, lo sai!
-Akamai # Se ti firmassi io per prima la petizione gli altri animali non esiteranno nell’aiutarti, ricordati che sono pur sempre la grande anziana AKAMAI!! Ora mi servono solo queste foglie speciali (immagine) per poterti creare la pergamena della petizione. Vai le troverai nel bosco!
+Akamai # Se ti firmassi io per prima la petizione gli altri animali non esiteranno nell’aiutarti, 
+Akamai # ricordati che sono pur sempre la grande anziana AKAMAI!! 
+Akamai # Ora mi servono solo queste foglie speciali per poterti creare la pergamena della petizione. 
+Akamai # Vai le troverai nel bosco!
