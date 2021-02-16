@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!135 &3193752638412924598
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125299748563988860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.64
+  m_Center: {x: -0.07, y: 2.38, z: -0.69}
 --- !u!136 &4744890040430687846
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14,19 +27,6 @@ CapsuleCollider:
   m_Height: 5.197666
   m_Direction: 1
   m_Center: {x: 0.22, y: 2, z: 0.049907267}
---- !u!135 &8394202298223026086
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125299748563988860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.51
-  m_Center: {x: 0.22, y: 4.09, z: 0.06297618}
 --- !u!135 &5348979764551329918
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -40,6 +40,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.68
   m_Center: {x: 1.57, y: 2.88, z: 0.66}
+--- !u!135 &8394202298223026086
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125299748563988860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.51
+  m_Center: {x: 0.22, y: 4.09, z: 0.06297618}
 --- !u!135 &9023630299553995548
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -53,19 +66,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.63
   m_Center: {x: -0.54, y: 1.8, z: 1.05}
---- !u!135 &3193752638412924598
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125299748563988860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.64
-  m_Center: {x: -0.07, y: 2.38, z: -0.69}
 --- !u!1001 &1279019053862554669
 PrefabInstance:
   m_ObjectHideFlags: 0
