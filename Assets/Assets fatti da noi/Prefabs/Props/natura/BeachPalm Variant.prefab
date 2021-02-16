@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 7717360553514442626, guid: d3e4b96f0c4814a029392245309758ca,
         type: 3}
       propertyPath: m_Name
-      value: BeachPalm
+      value: BeachPalm Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3e4b96f0c4814a029392245309758ca, type: 3}

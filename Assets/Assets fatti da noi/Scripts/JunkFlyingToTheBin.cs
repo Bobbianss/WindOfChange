@@ -6,7 +6,7 @@ public class JunkFlyingToTheBin : MonoBehaviour
 {
 	public Transform binTransform;
 	public float throwSpeed = 1f;
-	public float throwHeight = 3f;
+	public float throwHeight = 2f;
 	public bool throwJunk = false;
 	private Vector3 junkPosition;
 	private float normalizingDistance;
