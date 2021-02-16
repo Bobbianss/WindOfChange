@@ -6,7 +6,7 @@ public class JunkFlyingToTheBin : MonoBehaviour
 {
 	public Transform binTransform;
 	public float throwSpeed = 1f;
-	public float throwHeight = 3f;
+	public float throwHeight = 2f;
 	public bool throwJunk = false;
 	private Vector3 junkPosition;
 	private float normalizingDistance;
@@ -29,7 +29,7 @@ public class JunkFlyingToTheBin : MonoBehaviour
 			float parabulaVar = horizDistance / normalizingDistance; //0 quando parte, 1 quando arriva
 			float parabula = ((4f * parabulaVar) - (4f * Mathf.Pow(parabulaVar,2f))) * throwHeight ; 
 			this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y+parabula, this.gameObject.transform.position.z);
-			if (parabulaVar <= 0.001f)
+			if (parabulaVar <= 0.008f)
 				Destroy(this.gameObject);
 		}
 		

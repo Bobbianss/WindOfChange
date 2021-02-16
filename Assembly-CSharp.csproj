@@ -68,6 +68,7 @@
      <Compile Include="Assets\Assets fatti da noi\Scripts\JunkFlyingToTheBin.cs" />
      <Compile Include="Assets\Assets fatti da noi\Scripts\JunkScript.cs" />
      <Compile Include="Assets\Assets fatti da noi\Scripts\LandingZone.cs" />
+     <Compile Include="Assets\Assets fatti da noi\Scripts\LeaveRotation.cs" />
      <Compile Include="Assets\Assets fatti da noi\Scripts\MapPageManager.cs" />
      <Compile Include="Assets\Assets fatti da noi\Scripts\ModelYawAndPitch.cs" />
      <Compile Include="Assets\Assets fatti da noi\Scripts\NPCTalkScript.cs" />

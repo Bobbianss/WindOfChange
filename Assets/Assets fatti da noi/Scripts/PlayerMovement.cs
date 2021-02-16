@@ -122,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 right = Vector3.ProjectOnPlane(cam.transform.right, Vector3.up).normalized;
         Vector3 walk = forward * Input.GetAxis("Vertical") + right * Input.GetAxis("Horizontal");
         gabbiano.AddForce(walkForce * walk);//li usa per applicare forze proporzionali agli axis horizontal e vertical.
-        
+
     } 
 
     private void FlyPhysics() //Quando si vola, questo metodo calcola la forza totale sul gabbiano.
