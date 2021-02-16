@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class GamePermissionsManager : MonoBehaviour
 {
-	GameObject tartaruga1;
-	GameObject tartaruga2;
-	GameObject umano;
-	GameObject capitano;
+	public static GameObject marinaio;
+	public static GameObject capitano;
+	public static GameObject tartarugaBeach;
+	public static GameObject tartarugaMountain;
+
 
 	//QUESTA CLASSE è L'INTERFACCIA CHE IL GAME MANAGER USA PER GESTIRE I PERMESSI DI GIOCO
-	public bool FlyPermission
+	public void Start()
+	{
+		tartarugaBeach = GameObject.Find("Tartaruga_1");
+		tartarugaMountain = GameObject.Find("Tartaruga_2");
+		marinaio = GameObject.Find("Umano");
+		capitano = GameObject.Find("Capitano");
+
+	}
+	public static bool FlyPermission
 	{
 		get => FindObjectOfType<PlayerMovement>()._flyPermission;
 		set => FindObjectOfType<PlayerMovement>()._flyPermission = value;
@@ -19,7 +28,6 @@ public class GamePermissionsManager : MonoBehaviour
 	public static bool MovePermission
 	{
 		get => FindObjectOfType<PlayerMovement>()._movePermission;
-
 		set => FindObjectOfType<PlayerMovement>()._movePermission = value;
 	}
 
@@ -32,42 +40,54 @@ public class GamePermissionsManager : MonoBehaviour
 	}
 	
 
-	public bool PickUpPermission
+	public static bool PickUpPermission
 	{
 		get => FindObjectOfType<PickUpObject>()._pickUpPermission;
 
 		set => FindObjectOfType<PickUpObject>()._pickUpPermission = value;
 	}
 
-	public bool CollectObjectPermission
+	public static bool CollectObjectPermission
 	{
 		get => FindObjectOfType<ObjectCollect>()._objectCollectPermission;
 
 		set => FindObjectOfType<ObjectCollect>()._objectCollectPermission = value;
 	}
 
-	public bool talkPermissionTartaruga1
+	public static bool talkPermissionTartaruga1
 	{
-		get => tartaruga1.GetComponent<Collider>().enabled;
-		set => tartaruga1.GetComponent<Collider>().enabled = value;
+		get => tartarugaBeach.GetComponent<Collider>().enabled;
+		set => tartarugaBeach.GetComponent<Collider>().enabled = value;
 	}
 
-	public bool talkPermissionTartaruga2
+	public static bool talkPermissionTartaruga2
 	{
-		get => tartaruga2.GetComponent<Collider>().enabled;
-		set => tartaruga2.GetComponent<Collider>().enabled = value;
+		get => tartarugaMountain.GetComponent<Collider>().enabled;
+		set => tartarugaMountain.GetComponent<Collider>().enabled = value;
 	}
 
-	public bool talkPermissionUmano
+	public static bool talkPermissionUmano
 	{
-		get => umano.GetComponent<Collider>().enabled;
-		set => umano.GetComponent<Collider>().enabled = value;
+		get => marinaio.GetComponent<Collider>().enabled;
+		set => marinaio.GetComponent<Collider>().enabled = value;
 	}
-	public bool talkPermissionCapitano
+	public static bool talkPermissionCapitano
 	{
 		get => capitano.GetComponent<Collider>().enabled;
 		set => capitano.GetComponent<Collider>().enabled = value;
 	}
-	
+
+	//Verifica
+
+	public static bool spawnTartarugaBeach
+	{	get => tartarugaBeach.activeSelf;
+		set => tartarugaBeach.SetActive(value);
+	}
+	public static bool spawnTartarugaMountain
+	{
+		get => tartarugaMountain.activeSelf;
+		set => tartarugaMountain.SetActive(value);
+	}
+
 
 }

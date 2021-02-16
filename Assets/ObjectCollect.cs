@@ -11,6 +11,7 @@ public class ObjectCollect : MonoBehaviour
 		if(other.tag == "Player" && _objectCollectPermission)
 		{
 			GameState.AdvanceState();
+			Object.Destroy(this.gameObject);
 		}
 	}
 

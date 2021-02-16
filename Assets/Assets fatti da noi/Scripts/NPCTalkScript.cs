@@ -6,9 +6,11 @@ public class NPCTalkScript : MonoBehaviour
 {
     //import fileTXT -----------//string path = "Assets/Resources/"name".txt"; in caso volessimo imporate i testi a mano [it doesn't sense]
     public TextAsset dialogueFile;
+	
 
+	public static bool dialogueActive;
     //Struct Dialogue 
-    List<string> dialogLines;
+    public List<string> dialogLines;
     List<string> names;
     List<string> sentences;
 
@@ -18,24 +20,28 @@ public class NPCTalkScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        names = new List<string>();
-        sentences = new List<string>();
-        if (dialogueFile)
-        {
-            dialogLines = new List<string>(dialogueFile.text.Split("\n"[0]));
-        }
-
-        foreach (string str in dialogLines)
-        {
-            string[] vectorTemp = str.Split('#');
-            names.Add(vectorTemp[0]);
-            sentences.Add(vectorTemp[1]);
-        }
+		setUpDialoogueInit();
 
         dialogueSystem = FindObjectOfType<DialogueSystemScript>();
         
     }//[m] end Start()
 
+	public void setUpDialoogueInit()
+	{
+		names = new List<string>();
+		sentences = new List<string>();
+		if (dialogueFile)
+		{
+			dialogLines = new List<string>(dialogueFile.text.Split("\n"[0]));
+		}
+
+		foreach (string str in dialogLines)
+		{
+			string[] vectorTemp = str.Split('#');
+			names.Add(vectorTemp[0]);
+			sentences.Add(vectorTemp[1]);
+		}
+	}
     void setUpDialogueText()
     {
 
@@ -66,4 +72,22 @@ public class NPCTalkScript : MonoBehaviour
         FindObjectOfType<DialogueSystemScript>().outOfRangeOfNPC();
     }//[m] end OnTriggerExit();
 
+	public static void  dialogueIsDone()
+	{
+		dialogueActive = true;
+	}
+	public static bool isDialogueDone()
+	{
+		return dialogueActive;
+	}
+
+	public void changeDialogue(TextAsset t)
+	{
+		dialogueFile = t;
+		setUpDialoogueInit();
+		Debug.Log("CIAOOOOO");
+
+		
+	}
+	
 }

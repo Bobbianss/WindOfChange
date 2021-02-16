@@ -161,5 +161,12 @@ public class DialogueSystemScript : MonoBehaviour
         dialogueBoxGUI.gameObject.SetActive(false);
         dialogueGUI.SetActive(false);
 
+		//AGGIUNGERE METODO CHE SEGNALA LA FINE DEL DIALOGO E FA AVANZALO LO STATO
+		if (!NPCTalkScript.isDialogueDone())
+		{
+			GameState.AdvanceState();
+			NPCTalkScript.dialogueIsDone();
+		}
+
     }//[m] end closeDialogue()
 }

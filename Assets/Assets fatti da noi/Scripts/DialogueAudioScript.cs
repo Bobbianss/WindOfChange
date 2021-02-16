@@ -9,17 +9,15 @@ public class DialogueAudioScript : MonoBehaviour
     public static List<int> sequenceClips;
     public float rythm; // DA REGOLARE DOPO CHE SI INSERISCONO LE CLIP
     public static bool isRunning = false;
-    public static List<AudioClip> gabbianoSound, umanoSound, animaleASound, capitanoSound, animaleCSound, tartarugaSound;
+    public static List<AudioClip> eerfSound, marinaioSound, animaleASound, capitanoSound, animaleCSound, akamaiSound;
     public AudioSource audioSource;
     Coroutine voiceCoroutine;
 
     void Start()
     {
-        
-
-        umanoSound = new List<AudioClip>();
-        gabbianoSound = new List<AudioClip>();
-        tartarugaSound = new List<AudioClip>();
+        marinaioSound = new List<AudioClip>();
+        eerfSound = new List<AudioClip>();
+        akamaiSound = new List<AudioClip>();
         animaleASound = new List<AudioClip>();
         animaleCSound = new List<AudioClip>();
         capitanoSound = new List<AudioClip>();
@@ -27,7 +25,7 @@ public class DialogueAudioScript : MonoBehaviour
         // -----------------SET CLIP UMANO-------------------------------------
         for(int index=1; index<14; index++)
         {
-            umanoSound.Add(Resources.Load<AudioClip>("Umano/" + index));
+            marinaioSound.Add(Resources.Load<AudioClip>("Umano/" + index));
         }
         //----------------------SET CLIP CAPITANO ---------------------------
         for (int index = 1; index < 14; index++)
@@ -37,12 +35,12 @@ public class DialogueAudioScript : MonoBehaviour
         //------------------SET CLIP GABBIANO-------------------------------------
         for (int index = 1; index < 14; index++)
         {
-            gabbianoSound.Add(Resources.Load<AudioClip>("Gabbiano/" + index));
+            eerfSound.Add(Resources.Load<AudioClip>("Gabbiano/" + index));
         }
         //------------------SET CLIP TARTARUGA-------------------------------------
         for (int index = 1; index < 13; index++)
         {
-            tartarugaSound.Add(Resources.Load<AudioClip>("Tartaruga/" + index));
+            akamaiSound.Add(Resources.Load<AudioClip>("Tartaruga/" + index));
         }
         //------------------SET CLIP ANIMALE CINESE-------------------------------------
         for (int index = 1; index < 14; index++)
@@ -77,21 +75,21 @@ public class DialogueAudioScript : MonoBehaviour
        sequenceFromSentece(sentence);
         switch (nameSpeaker.Remove(nameSpeaker.Length - 1, 1)) // remove last char control
         {
-            case "Umano":
+            case "Marinaio":
                 stopThisCorutine(voiceCoroutine);
-                voiceCoroutine = StartCoroutine(Voice(sequenceClips, umanoSound));
+                voiceCoroutine = StartCoroutine(Voice(sequenceClips, marinaioSound));
                 break;
             case "Capitano":
                 stopThisCorutine(voiceCoroutine);
                 voiceCoroutine= StartCoroutine(Voice(sequenceClips, capitanoSound));
                 break;
-            case "Gabbiano":
+            case "Eerf":
                 stopThisCorutine(voiceCoroutine);
-                voiceCoroutine =StartCoroutine(Voice(sequenceClips, gabbianoSound));
+                voiceCoroutine =StartCoroutine(Voice(sequenceClips, eerfSound));
                 break;
-            case "Tartaruga":
+            case "Akamai":
                 stopThisCorutine(voiceCoroutine);
-                voiceCoroutine=StartCoroutine(Voice(sequenceClips, tartarugaSound));
+                voiceCoroutine=StartCoroutine(Voice(sequenceClips, akamaiSound));
                 break;
             case "AnimaleCinese":
                 stopThisCorutine(voiceCoroutine);

@@ -1,13 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine;	
 
-public class GameState: MonoBehaviour
+public class GameState : MonoBehaviour
 {
-	public static int stateNumber = 0;
+	private static int _stateNumber = 0;
+
+	public static int stateNumber
+	{
+		get => _stateNumber;
+
+		set
+		{
+			_stateNumber = value;
+			EventsScript.PropagateEvents(_stateNumber);
+			Debug.Log("Stato Attuale:  " + _stateNumber);
+		}
+	}
+
 
 	public static void AdvanceState()
 	{
-		stateNumber++;
+		_stateNumber++;
+		Debug.Log("STATO AVANZATO------------------------------------");
 	}
 }

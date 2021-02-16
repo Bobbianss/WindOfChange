@@ -19,21 +19,20 @@ public class CameraSwitchScript : MonoBehaviour
     }
 
     public void switchToPerson(string nameSpeaker){
-        Debug.Log("SONO DENTRO FIRST");
-        Debug.Log("Diagolo attivo_Fuori" + DialogueSystemScript.dialogueActive);
+        
         if (DialogueSystemScript.dialogueActive) 
         {
-            Debug.Log("Diagolo attivo" +  DialogueSystemScript.dialogueActive);
+            
             switch (nameSpeaker.Remove(nameSpeaker.Length - 1, 1))
             { 
                 case "Gabbiano":
-                    Debug.Log("SONO DENTRO_Gabbiano");
+                    
                     playerCamera.m_Priority = 1;
                     npcCamera.m_Priority = 0;
                     gameCamera.m_Priority = 0;
                 break;
                 default:
-                    Debug.Log("SONO DENTRO_Others");
+                    
                     playerCamera.m_Priority = 0;
                     npcCamera.m_Priority = 1;
                     gameCamera.m_Priority = 0;
@@ -43,7 +42,7 @@ public class CameraSwitchScript : MonoBehaviour
 
         }else if(DialogueSystemScript.outOfRange == true || DialogueSystemScript.dialogueActive == false)
         {
-            Debug.Log("Furi dal tunnel");
+            
             playerCamera.m_Priority =0 ;
             npcCamera.m_Priority = 0;
             gameCamera.m_Priority = 1;

@@ -10,12 +10,13 @@ public class GatherLeavesScript : MonoBehaviour
 	{
 		gatherLeavesManager = FindObjectOfType<GatherLeavesManagerScript>();	
 	}
-	private void OnCollisionEnter(Collision collision)
+	private void OnTriggerEnter(Collider other)
 	{
-		if (collision.gameObject.tag == "Player" && gatherLeavesManager._gatherPermission!=false)
+		if (other.gameObject.tag == "Player" && gatherLeavesManager._gatherPermission!=false)
 		{
-			Object.Destroy(this.gameObject);
+			
 			GatherLeavesManagerScript.countLeaves = GatherLeavesManagerScript.countLeaves + 1;
+			Object.Destroy(this.gameObject);
 		}
 	}
 

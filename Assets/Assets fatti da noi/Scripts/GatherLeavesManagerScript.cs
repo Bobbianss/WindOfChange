@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class GatherLeavesManagerScript : MonoBehaviour
 {
+	private static int _countLeaves;
 	public static int countLeaves
 	{
-		get => countLeaves;
+		get => _countLeaves;
 
 		set
 		{
-			countLeaves = value;
-			if(countLeaves == 10)
+			_countLeaves = value;
+			if(_countLeaves == 10)
 			{
 				GameState.AdvanceState();
 			}
