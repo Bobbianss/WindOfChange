@@ -737,6 +737,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Assets fatti da noi\Scripts\CameraSwitchScript.cs" />
+    <Compile Include="Assets\Assets fatti da noi\Scripts\ChangeSceneAfterTime.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\CheatsScript.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\DialogueAudioScript.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\DialogueContentManagerScript.cs" />
@@ -758,6 +759,7 @@
     <Compile Include="Assets\Assets fatti da noi\Scripts\ModelYawAndPitch.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\NPCTalkScript.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\NewGameScript.cs" />
+    <Compile Include="Assets\Assets fatti da noi\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\PickUpCollisionTriggerer.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\PickUpObject.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\PlayerMovement.cs" />
