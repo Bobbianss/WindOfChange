@@ -25,7 +25,7 @@ public class CameraSwitchScript : MonoBehaviour
             
             switch (nameSpeaker.Remove(nameSpeaker.Length - 1, 1))
             { 
-                case "Gabbiano":
+                case "Eerf":
                     
                     playerCamera.m_Priority = 1;
                     npcCamera.m_Priority = 0;
