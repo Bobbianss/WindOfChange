@@ -759,6 +759,7 @@
     <Compile Include="Assets\Assets fatti da noi\Scripts\ModelYawAndPitch.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\NPCTalkScript.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\NewGameScript.cs" />
+    <Compile Include="Assets\Assets fatti da noi\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\PickUpCollisionTriggerer.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\PickUpObject.cs" />
     <Compile Include="Assets\Assets fatti da noi\Scripts\PlayerMovement.cs" />
