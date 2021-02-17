@@ -47,7 +47,7 @@ public class EventsScript : MonoBehaviour
 		//PickUp_Permission
 		GamePermissionsManager.PickUpPermission = stateTemp.pickUpPermission;
 		//Object_Permission
-		GamePermissionsManager.CollectObjectPermission = stateTemp.objectPermission;
+		//GamePermissionsManager.CollectObjectPermission = stateTemp.objectPermission;
 		//Talk_Permission_Tartaruga1
 		GamePermissionsManager.talkPermissionTartaruga1 = stateTemp.talkPermissionTartaruga1;
 		//Talk_Permission_Tartaruga2

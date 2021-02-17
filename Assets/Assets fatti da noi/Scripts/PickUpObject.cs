@@ -107,6 +107,7 @@ public class PickUpObject : MonoBehaviour
 		thing.GetComponent<Collider>().enabled = true;
 		thing.GetComponent<Rigidbody>().isKinematic = false;
 		thing.GetComponent<JunkFlyingToTheBin>().throwJunk = true;
+		thing.GetComponent<JunkFlyingToTheBin>().TrashDestroy();
 		thing = null;
 		animator.SetBool("Oggetto in bocca", false);
 		animator.SetTrigger("Lascia oggetto");

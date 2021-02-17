@@ -14,5 +14,19 @@ public class CheatsScript : MonoBehaviour
 		{
 			GameState.stateNumber = GameState.stateNumber - 1;
 		}
+		if (Input.GetKeyDown(KeyCode.Y))
+		{
+			GameState.stateNumber = 13;
+		}
+		if (Input.GetKeyDown(KeyCode.T))
+		{
+			FindObjectOfType<PlayerMovement>().speedCheat = 3f;
+		}
+		if (Input.GetKeyUp(KeyCode.T))
+		{
+			FindObjectOfType<PlayerMovement>().speedCheat = 1f;
+		}
+
 	}
+
 }

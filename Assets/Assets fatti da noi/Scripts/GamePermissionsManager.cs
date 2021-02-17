@@ -46,14 +46,14 @@ public class GamePermissionsManager : MonoBehaviour
 
 		set => FindObjectOfType<PickUpObject>()._pickUpPermission = value;
 	}
-
+	/*
 	public static bool CollectObjectPermission
 	{
 		get => FindObjectOfType<ObjectCollect>()._objectCollectPermission;
 
 		set => FindObjectOfType<ObjectCollect>()._objectCollectPermission = value;
 	}
-
+	*/
 	public static bool talkPermissionTartaruga1
 	{
 		get => tartarugaBeach.GetComponent<Collider>().enabled;

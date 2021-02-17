@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
 	//PauseMenu pauseMenu;               //scollegato
 	//private float viewSensitivity;     //scollegato
 
+	public float speedCheat = 1f;
+
+
 	//Permessi
 	public bool _flyPermission;
 	public bool _movePermission;
@@ -124,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
 		Vector3 forward = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up).normalized;   //proietta camera.forward e camera.right sul piano XZ, li normalizza.
         Vector3 right = Vector3.ProjectOnPlane(cam.transform.right, Vector3.up).normalized;
         Vector3 walkDir = forward * Input.GetAxis("Vertical") + right * Input.GetAxis("Horizontal");
-		gabbiano.AddForce(walkForce * walkDir);//li usa per applicare forze proporzionali agli axis horizontal e vertical.
+		gabbiano.AddForce(walkForce * walkDir * speedCheat);//li usa per applicare forze proporzionali agli axis horizontal e vertical.
 		backFin.GetComponent<Rigidbody>().AddForce(-1f * walkDir * walkForce * backFinWalkForceFactor);
 		//gabbiano.MovePosition(gabbiano.position + walkDir * walkForce);
 		//gabbiano.MoveRotation(Quaternion.LookRotation(walkDir, Vector3.up));
@@ -145,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 verticalForce = Vector3.up * (portanza - dimPortanza - gravity);
 
-        Vector3 forwardForce = Input.GetAxis("Fire1") * cam.transform.forward * propulsion;
+        Vector3 forwardForce = Input.GetAxis("Fire1") * cam.transform.forward * propulsion * speedCheat;
 
         totalFlyForce = (dragForceG + verticalForce + forwardForce) * Time.fixedDeltaTime;
 
