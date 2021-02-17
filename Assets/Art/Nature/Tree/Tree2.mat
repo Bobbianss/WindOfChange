@@ -71,9 +71,9 @@ Material:
     - _MainTint_VariationIntensity: 0.3
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _OutlineDepthSensitivity: 1
+    - _OutlineDepthSensitivity: 0.57
     - _OutlineNormalsSensitivity: 0
-    - _OutlineThickness: 2
+    - _OutlineThickness: 1.72
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0
