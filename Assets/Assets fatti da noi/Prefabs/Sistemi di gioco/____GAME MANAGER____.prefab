@@ -40,7 +40,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081647031}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 23.1, y: 21.97, z: 1}
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9ec742befd38946b60e96fa3c12add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStateOfActivation: 0
+  gameStateOfActivation: 3
 --- !u!1 &967218923649658238
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 2746468252405397641}
   - component: {fileID: 2746468252405397643}
   - component: {fileID: 2746468252405397644}
+  - component: {fileID: 2746468252405397645}
   m_Layer: 0
   m_Name: ____GAME MANAGER____
   m_TagString: Untagged
@@ -142,3 +143,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventFile: {fileID: 4900000, guid: 5f7749351777d024fa3a0b811e7213bf, type: 3}
+--- !u!114 &2746468252405397645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967218923649658238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ecd12de4cf4ed458253ff7fe462e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

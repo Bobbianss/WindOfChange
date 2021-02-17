@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class NPCTalkScript : MonoBehaviour
 {
     //import fileTXT -----------//string path = "Assets/Resources/"name".txt"; in caso volessimo imporate i testi a mano [it doesn't sense]
     public TextAsset dialogueFile;
-	
 
 	public static bool dialogueActive;
     //Struct Dialogue 
@@ -71,6 +71,16 @@ public class NPCTalkScript : MonoBehaviour
         //disable All dialogue and other GUIs
         FindObjectOfType<DialogueSystemScript>().outOfRangeOfNPC();
     }//[m] end OnTriggerExit();
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if(other.tag == "Player")
+		{
+			FindObjectOfType<CameraSwitchScript>().npcCamera = GetComponentInChildren<CinemachineVirtualCamera>();
+		}
+	}
+
+
 
 	public static void  dialogueIsDone()
 	{
