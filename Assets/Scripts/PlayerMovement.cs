@@ -61,6 +61,10 @@ public class PlayerMovement : MonoBehaviour
 			StartCoroutine(TurnOffLandingForSeconds(noLandingTime));
 		}
 
+		if (!IsGrounded() && isWalkingNotFlying && _flyPermission)
+		{
+			TakeOff();
+		}
 		LandOnLowAltitude();
 		//Debug.Log("Is grounded " + IsGrounded() + "  Is walking " + isWalkingNotFlying + "  Can fly " + canFly + "  Wind taken " + windTaken);
 	}

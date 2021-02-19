@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class TempBussola : MonoBehaviour
 {
-	public Camera cam;
+	public Camera cam, overlayCam;
 	public Transform playerTransform, objectiveTransform;
 	public Transform fondoBussola, agoBussola;
 
-	public Vector3 angle1, angle2, angle3, angle4;
+	public Vector3 angle1, angle2, angle3, angle4, startEuler;
 
-    void Update()
+	private void Start()
+	{
+		startEuler = transform.rotation.eulerAngles;
+	}
+
+	void Update()
     {
 		Vector3 ObjectiveDirectionInWorld = playerTransform.position - objectiveTransform.position;
 		Vector3 ObjectiveDirectionFlat = Vector3.ProjectOnPlane(ObjectiveDirectionInWorld, Vector3.up);
@@ -18,8 +23,8 @@ public class TempBussola : MonoBehaviour
 		Vector3 North = Vector3.forward;
 		float angleFromNorthToLook = Vector3.SignedAngle(North, LookDirectionWorldFlat, Vector3.up);
 		float angleFromNorthToObjDir = Vector3.SignedAngle(North, ObjectiveDirectionFlat, Vector3.up);
-		fondoBussola.transform.rotation = Quaternion.Euler(angle1* angleFromNorthToLook + angle2*angleFromNorthToObjDir - Vector3.up*90);
-		agoBussola.transform.rotation = Quaternion.Euler(angle3 * angleFromNorthToLook + angle4 * angleFromNorthToObjDir + Vector3.forward * 90);
+		fondoBussola.transform.localRotation = Quaternion.Euler(angle1* angleFromNorthToLook + angle2 * angleFromNorthToObjDir) ;
+		agoBussola.transform.localRotation   = Quaternion.Euler(angle3 * angleFromNorthToLook + angle4 * angleFromNorthToObjDir);
 
 	}
 }

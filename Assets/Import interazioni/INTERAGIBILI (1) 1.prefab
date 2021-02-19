@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binTransform: {fileID: 5739731322703722168}
-  throwSpeed: 1
+  throwTime: 1
   throwHeight: 3
   throwJunk: 0
 --- !u!1 &378729950131155711
@@ -116,7 +116,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378729950131155711}
-  m_LocalRotation: {x: -0.5743159, y: -0.4101268, z: -0.4053614, w: 0.58106744}
+  m_LocalRotation: {x: -0.49706808, y: -0.50291485, z: -0.49706808, w: 0.50291485}
   m_LocalPosition: {x: -0.23554993, y: 0.8173351, z: 0.5040283}
   m_LocalScale: {x: 2.0100603, y: 2.0100603, z: 2.0100603}
   m_Children:
@@ -124,7 +124,7 @@ Transform:
   - {fileID: 2033858932182906598}
   m_Father: {fileID: 4584627754904580609}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.33, y: -70.43, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.33, y: -90, z: 0}
 --- !u!1 &434605122504432990
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38cf3083698b7e459b4ed132ee0fc67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gatherPermission: 0
+  _gatherPermission: 1
 --- !u!1 &1650776161405343058
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650776161405343058}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -644,9 +644,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4584627754904580609}
   - component: {fileID: 4584627754904580612}
-  - component: {fileID: 4584627754904580615}
   - component: {fileID: 4584627754904580614}
   - component: {fileID: 413409444038838310}
+  - component: {fileID: 5430901743998908568}
   m_Layer: 0
   m_Name: bottiglia_vetro_interactable
   m_TagString: Oggetto da raccogliere
@@ -685,19 +685,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4584627754904580615
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4584627754904580608}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.64901733, y: 0.19038463, z: 0.34483337}
-  m_Center: {x: -0.14741516, y: 0.0772177, z: -0.14507294}
 --- !u!114 &4584627754904580614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,9 +711,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binTransform: {fileID: 5739731323047195728}
-  throwSpeed: 1
+  throwTime: 1
   throwHeight: 3
   throwJunk: 0
+--- !u!136 &5430901743998908568
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4584627754904580608}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.08128476
+  m_Height: 0.74423516
+  m_Direction: 0
+  m_Center: {x: 0.12788242, y: 0.074825525, z: -0.10329636}
 --- !u!1 &4584627755419439529
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,8 +790,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3781128, y: 0.20163679, z: 0.5053711}
-  m_Center: {x: -0.08163452, y: 0.07623458, z: 0.009597778}
+  m_Size: {x: 0.3781128, y: 0.13465357, z: 0.49517173}
+  m_Center: {x: -0.08163452, y: 0.070117, z: 0.014697462}
 --- !u!114 &4584627755419439535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,7 +818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binTransform: {fileID: 5739731323189510399}
-  throwSpeed: 1
+  throwTime: 1
   throwHeight: 3
   throwJunk: 0
 --- !u!1 &4584627755636104221
@@ -830,9 +831,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4584627755636104220}
   - component: {fileID: 4584627755636104217}
-  - component: {fileID: 4584627755636104218}
   - component: {fileID: 4584627755636104219}
   - component: {fileID: 413409442765727291}
+  - component: {fileID: 4352679783541226846}
   m_Layer: 0
   m_Name: barattolo_vetro_interactable
   m_TagString: Oggetto da raccogliere
@@ -848,7 +849,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4584627755636104221}
   m_LocalRotation: {x: -0.06429334, y: -0, z: -0, w: 0.99793106}
-  m_LocalPosition: {x: 29.770004, y: -3.313, z: -12.449}
+  m_LocalPosition: {x: 26.48, y: -3.313, z: -7.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2935575791726287170}
@@ -871,19 +872,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4584627755636104218
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4584627755636104221}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.19180298, y: 0.3419578, z: 0.19366455}
-  m_Center: {x: -0.4040985, y: 0.15848625, z: -0.28823853}
 --- !u!114 &4584627755636104219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,9 +898,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binTransform: {fileID: 5739731323047195728}
-  throwSpeed: 1
+  throwTime: 1
   throwHeight: 3
   throwJunk: 0
+--- !u!136 &4352679783541226846
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4584627755636104221}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.077816606
+  m_Height: 0.32728457
+  m_Direction: 1
+  m_Center: {x: -0.828235, y: 0.14883862, z: -1.4797068}
 --- !u!1 &4584627755758966979
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,9 +925,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4584627755758966978}
   - component: {fileID: 4584627755758966983}
-  - component: {fileID: 4584627755758966980}
   - component: {fileID: 4584627755758966981}
   - component: {fileID: 413409442880103141}
+  - component: {fileID: 8442552864872055730}
   m_Layer: 0
   m_Name: maionese_interactable
   m_TagString: Oggetto da raccogliere
@@ -964,19 +966,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4584627755758966980
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4584627755758966979}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.43771362, y: 0.21061468, z: 0.23751831}
-  m_Center: {x: -0.15733337, y: -0.02252841, z: 0.1535492}
 --- !u!114 &4584627755758966981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1003,9 +992,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binTransform: {fileID: 5739731323189510399}
-  throwSpeed: 1
+  throwTime: 1
   throwHeight: 3
   throwJunk: 0
+--- !u!136 &8442552864872055730
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4584627755758966979}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.09827767
+  m_Height: 0.42959803
+  m_Direction: 0
+  m_Center: {x: -0.16520098, y: -0.021791324, z: 0.1522749}
 --- !u!1 &4584627755813192725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,9 +1019,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4584627755813192724}
   - component: {fileID: 4584627755813192721}
-  - component: {fileID: 4584627755813192722}
   - component: {fileID: 4584627755813192723}
   - component: {fileID: 413409442791800371}
+  - component: {fileID: 3451472843899950508}
   m_Layer: 0
   m_Name: latta_interactable
   m_TagString: Oggetto da raccogliere
@@ -1057,19 +1060,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4584627755813192722
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4584627755813192725}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.20614624, y: 0.27091026, z: 0.20614624}
-  m_Center: {x: -0.23039246, y: 0.12028122, z: -0.17857361}
 --- !u!114 &4584627755813192723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,9 +1086,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binTransform: {fileID: 5739731323387538428}
-  throwSpeed: 1
+  throwTime: 1
   throwHeight: 3
   throwJunk: 0
+--- !u!136 &3451472843899950508
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4584627755813192725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.070581704
+  m_Height: 0.281461
+  m_Direction: 1
+  m_Center: {x: -0.23870963, y: 0.10476291, z: -0.18183985}
 --- !u!1 &4584627756206038152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,8 +1165,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.23205566, y: 0.2505548, z: 0.51704407}
-  m_Center: {x: -0.12490845, y: 0.12860858, z: 0.15636444}
+  m_Size: {x: 0.18520036, y: 0.19083929, z: 0.39940715}
+  m_Center: {x: -0.12107544, y: 0.11857772, z: 0.20178413}
 --- !u!114 &4584627756206038158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1189,7 +1193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binTransform: {fileID: 5739731322703722168}
-  throwSpeed: 1
+  throwTime: 1
   throwHeight: 3
   throwJunk: 0
 --- !u!1 &4584627756321515508
@@ -1202,9 +1206,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4584627756321515509}
   - component: {fileID: 4584627756321515504}
-  - component: {fileID: 4584627756321515507}
   - component: {fileID: 4584627756321515506}
   - component: {fileID: 413409442352160210}
+  - component: {fileID: 7919318772177699788}
   m_Layer: 0
   m_Name: flacone_tossico_interactable
   m_TagString: Oggetto da raccogliere
@@ -1243,19 +1247,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4584627756321515507
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4584627756321515508}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.4007721, y: 0.715286, z: 0.40220642}
-  m_Center: {x: -0.47013092, y: 0.16565669, z: -0.176857}
 --- !u!114 &4584627756321515506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,9 +1273,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binTransform: {fileID: 5739731323189510399}
-  throwSpeed: 1
+  throwTime: 1
   throwHeight: 3
   throwJunk: 0
+--- !u!136 &7919318772177699788
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4584627756321515508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.19078295
+  m_Height: 0.71550465
+  m_Direction: 1
+  m_Center: {x: -0.4741371, y: 0.14224711, z: -0.18827364}
 --- !u!1 &4799849770175107509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,7 +1380,6 @@ GameObject:
   - component: {fileID: 5200855231244943512}
   - component: {fileID: 5200855231244943515}
   - component: {fileID: 5200855231244943514}
-  - component: {fileID: 5200855231244943513}
   m_Layer: 0
   m_Name: cestino_metallo
   m_TagString: Untagged
@@ -1444,20 +1448,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5200855231244943513
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5200855231244943519}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &5200855231490679277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,7 +1459,6 @@ GameObject:
   - component: {fileID: 5200855231490679278}
   - component: {fileID: 5200855231490679273}
   - component: {fileID: 5200855231490679272}
-  - component: {fileID: 5200855231490679279}
   m_Layer: 0
   m_Name: cestino_plastica
   m_TagString: Untagged
@@ -1538,20 +1527,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5200855231490679279
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5200855231490679277}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &5200855231707767000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,7 +1572,6 @@ GameObject:
   - component: {fileID: 5200855231816723562}
   - component: {fileID: 5200855231816723557}
   - component: {fileID: 5200855231816723556}
-  - component: {fileID: 5200855231816723563}
   m_Layer: 0
   m_Name: cestino_vetro
   m_TagString: Untagged
@@ -1666,20 +1640,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5200855231816723563
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5200855231816723561}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &5318478614391818302
 GameObject:
   m_ObjectHideFlags: 0
@@ -3629,7 +3589,6 @@ GameObject:
   - component: {fileID: 8300206424945333417}
   - component: {fileID: 8300206424945333414}
   - component: {fileID: 8300206424945333415}
-  - component: {fileID: 8300206424945333412}
   m_Layer: 0
   m_Name: cestino_carta
   m_TagString: Untagged
@@ -3698,20 +3657,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8300206424945333412
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8300206424945333413}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8737815785495600161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3932,6 +3877,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6741751279982421737, guid: 1f3fff19d9ac52448b03b81b694992de,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.16
+      objectReference: {fileID: 0}
     - target: {fileID: 6741751279982421738, guid: 1f3fff19d9ac52448b03b81b694992de,
         type: 3}
       propertyPath: m_Name
@@ -3946,6 +3896,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5739731323189510399}
     m_Modifications:
+    - target: {fileID: 6741751279982421717, guid: 1f3fff19d9ac52448b03b81b694992de,
+        type: 3}
+      propertyPath: junkTag
+      value: plastica
+      objectReference: {fileID: 0}
     - target: {fileID: 6741751279982421718, guid: 1f3fff19d9ac52448b03b81b694992de,
         type: 3}
       propertyPath: m_RootOrder
@@ -4000,6 +3955,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741751279982421737, guid: 1f3fff19d9ac52448b03b81b694992de,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 6741751279982421738, guid: 1f3fff19d9ac52448b03b81b694992de,
         type: 3}
@@ -4115,6 +4075,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5739731323047195728}
     m_Modifications:
+    - target: {fileID: 6741751279982421717, guid: 1f3fff19d9ac52448b03b81b694992de,
+        type: 3}
+      propertyPath: junkTag
+      value: vetro
+      objectReference: {fileID: 0}
     - target: {fileID: 6741751279982421718, guid: 1f3fff19d9ac52448b03b81b694992de,
         type: 3}
       propertyPath: m_RootOrder
@@ -4169,6 +4134,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741751279982421737, guid: 1f3fff19d9ac52448b03b81b694992de,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 6741751279982421738, guid: 1f3fff19d9ac52448b03b81b694992de,
         type: 3}
@@ -4284,6 +4254,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5739731323387538428}
     m_Modifications:
+    - target: {fileID: 6741751279982421717, guid: 1f3fff19d9ac52448b03b81b694992de,
+        type: 3}
+      propertyPath: junkTag
+      value: metallo
+      objectReference: {fileID: 0}
     - target: {fileID: 6741751279982421718, guid: 1f3fff19d9ac52448b03b81b694992de,
         type: 3}
       propertyPath: m_RootOrder
@@ -4338,6 +4313,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741751279982421737, guid: 1f3fff19d9ac52448b03b81b694992de,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 6741751279982421738, guid: 1f3fff19d9ac52448b03b81b694992de,
         type: 3}

@@ -11,7 +11,9 @@ public class ModelYawAndPitch : MonoBehaviour //QUESTA CLASSE RUOTA IL MODELLO I
 	public float animationRollSensitivity;
 	public float animationPushSensitivity;
 	public float walkSpeedSensitivity;
+	public float glideSpeed;
 	float pushParam = 0f;
+	float speedNormalization = 1f;
 	//roba del rigidbody
 	public Rigidbody rb;
     public float pitchSensitivity = 1f;
@@ -59,18 +61,20 @@ public class ModelYawAndPitch : MonoBehaviour //QUESTA CLASSE RUOTA IL MODELLO I
 		{
 			if(pushParam <= 1f)
 			{
-				pushParam += animationPushSensitivity * 0.01f;
+				pushParam += animationPushSensitivity * 0.05f;
 			}
 		}
 		else
 		{
 			if (pushParam >= 0f)
 			{
-				pushParam -= animationPushSensitivity * 0.01f;
+				pushParam -= animationPushSensitivity * 0.05f;
 			}
 		}
 
-		animator.SetFloat("Spinta", pushParam);
+		float[] p = { pushParam, 1 - pushParam };
+		
+		animator.SetFloat("Spinta", Mathf.Max(p));
 	}
 
 	private void UpdateWalkAnimParameter()
