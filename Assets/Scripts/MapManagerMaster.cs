@@ -31,12 +31,13 @@ public class MapManagerMaster : MonoBehaviour
 		{
 			mapIsUp = !mapIsUp;
 			GetComponent<Animator>().SetBool("Mappa su", mapIsUp);
+			Cursor.visible = mapIsUp;
 			StopCameraWheLookingMap();
 		}
 
 		MapInteraction();
 
-		Debug.Log("Cursor visible: " + Cursor.visible + " |Cursor lock: " + Cursor.lockState);
+		//Debug.Log("Cursor visible: " + Cursor.visible + " |Cursor lock: " + Cursor.lockState);
     }
 
 	private void StopCameraWheLookingMap()

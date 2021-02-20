@@ -6,7 +6,12 @@ public class GameState : MonoBehaviour
 {
 	private static int _stateNumber = 0;
 
-	public static int stateNumber
+	private void Start()
+	{
+		StateNumber = 0;
+	}
+
+	public static int StateNumber
 	{
 		get => _stateNumber;
 
@@ -22,6 +27,6 @@ public class GameState : MonoBehaviour
 	public static void AdvanceState()
 	{
 		_stateNumber++;
-		Debug.Log("STATO AVANZATO------------------------------------");
+		//Debug.Log("STATO AVANZATO------------------------------------");
 	}
 }

@@ -8,15 +8,15 @@ public class CheatsScript : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.N))
 		{
-			GameState.stateNumber++;
+			GameState.StateNumber++;
 		}
 		if (Input.GetKeyDown(KeyCode.B))
 		{
-			GameState.stateNumber = GameState.stateNumber - 1;
+			GameState.StateNumber = GameState.StateNumber - 1;
 		}
 		if (Input.GetKeyDown(KeyCode.Y))
 		{
-			GameState.stateNumber = 13;
+			GameState.StateNumber = 13;
 		}
 		if (Input.GetKeyDown(KeyCode.T))
 		{

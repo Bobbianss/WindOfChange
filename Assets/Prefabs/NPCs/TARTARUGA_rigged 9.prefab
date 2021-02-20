@@ -600,8 +600,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5038005661541574852}
-  - component: {fileID: 1300778724}
   - component: {fileID: 1300778725}
+  - component: {fileID: 1300778724}
   - component: {fileID: 1300778726}
   m_Layer: 0
   m_Name: TARTARUGA_rigged 9
@@ -628,6 +628,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1300778725
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665888801162523262}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4400446, y: 2.3878472, z: 2.8127944}
+  m_Center: {x: 0.05205307, y: 0.6939125, z: 2.653605}
 --- !u!136 &1300778724
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -642,19 +655,6 @@ CapsuleCollider:
   m_Height: 3.2284248
   m_Direction: 1
   m_Center: {x: -0.0000000011610972, y: 0.3282125, z: 0.039923787}
---- !u!65 &1300778725
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5665888801162523262}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.4400446, y: 2.3878472, z: 2.8127944}
-  m_Center: {x: 0.05205307, y: 0.6939125, z: 2.653605}
 --- !u!114 &1300778726
 MonoBehaviour:
   m_ObjectHideFlags: 0

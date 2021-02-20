@@ -10,9 +10,9 @@ public class TriggerCambioTartaruga : MonoBehaviour //funziona?
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (gameStateOfActivation == GameState.stateNumber)
+		if (gameStateOfActivation == GameState.StateNumber)
 		{
-			GameState.stateNumber++;
+			GameState.StateNumber++;
 		}
 	}
 

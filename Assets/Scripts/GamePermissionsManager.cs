@@ -11,7 +11,7 @@ public class GamePermissionsManager : MonoBehaviour
 
 
 	//QUESTA CLASSE è L'INTERFACCIA CHE IL GAME MANAGER USA PER GESTIRE I PERMESSI DI GIOCO
-	public void Start()
+	public void Awake()
 	{
 		tartarugaBeach = GameObject.Find("Tartaruga_1");
 		tartarugaMountain = GameObject.Find("Tartaruga_2");
@@ -32,7 +32,7 @@ public class GamePermissionsManager : MonoBehaviour
 	}
 
 	
-	public static bool gatherPermission
+	public static bool GatherPermission
 	{
 		get => FindObjectOfType<GatherLeavesManagerScript>()._gatherPermission;
 		set => FindObjectOfType<GatherLeavesManagerScript>()._gatherPermission = value;
@@ -54,40 +54,42 @@ public class GamePermissionsManager : MonoBehaviour
 		set => FindObjectOfType<ObjectCollect>()._objectCollectPermission = value;
 	}
 	*/
-	public static bool talkPermissionTartaruga1
+	public static bool TalkPermissionTartaruga1
 	{
-		get => tartarugaBeach.GetComponent<Collider>().enabled;
-		set => tartarugaBeach.GetComponent<Collider>().enabled = value;
+		get => tartarugaBeach.GetComponents<Collider>()[1].enabled;
+		set => tartarugaBeach.GetComponents<Collider>()[1].enabled = value;
+
 	}
 
-	public static bool talkPermissionTartaruga2
+	public static bool TalkPermissionTartaruga2
 	{
-		get => tartarugaMountain.GetComponent<Collider>().enabled;
-		set => tartarugaMountain.GetComponent<Collider>().enabled = value;
+		get => tartarugaMountain.GetComponents<Collider>()[1].enabled;
+		set => tartarugaMountain.GetComponents<Collider>()[1].enabled = value;
+
 	}
 
-	public static bool talkPermissionUmano
+	public static bool TalkPermissionUmano
 	{
-		get => marinaio.GetComponent<Collider>().enabled;
-		set => marinaio.GetComponent<Collider>().enabled = value;
+		get => marinaio.GetComponents<Collider>()[1].enabled;
+		set => marinaio.GetComponents<Collider>()[1].enabled = value;
 	}
-	public static bool talkPermissionCapitano
+	public static bool TalkPermissionCapitano
 	{
-		get => capitano.GetComponent<Collider>().enabled;
-		set => capitano.GetComponent<Collider>().enabled = value;
+		get => capitano.GetComponents<Collider>()[1].enabled;
+		set => capitano.GetComponents<Collider>()[1].enabled = value;
 	}
 
 	//Verifica
 
-	public static bool spawnTartarugaBeach
+	public static bool SpawnTartarugaBeach
 	{	get => tartarugaBeach.activeSelf;
 		set => tartarugaBeach.SetActive(value);
 	}
-	public static bool spawnTartarugaMountain
+	public static bool SpawnTartarugaMountain
 	{
 		get => tartarugaMountain.activeSelf;
 		set => tartarugaMountain.SetActive(value);
 	}
 
-
+	
 }

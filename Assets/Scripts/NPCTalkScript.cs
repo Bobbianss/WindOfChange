@@ -95,9 +95,6 @@ public class NPCTalkScript : MonoBehaviour
 	{
 		dialogueFile = t;
 		setUpDialoogueInit();
-		Debug.Log("CIAOOOOO");
-
-		
 	}
 	
 }

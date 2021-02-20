@@ -10,7 +10,7 @@ public class DialogueContentManagerScript : MonoBehaviour
 	public static GameObject capitano;
 
 	
-	public void Start()
+	public void Awake()
 	{
 		tartaruga1 = GameObject.Find("Tartaruga_1");
 		tartaruga2 = GameObject.Find("Tartaruga_2");
@@ -18,14 +18,21 @@ public class DialogueContentManagerScript : MonoBehaviour
 		capitano = GameObject.Find("Capitano");
 
 	}
-	public static void changeDialogue(GameObject npc, TextAsset txt)
+	public static void ChangeDialogue(GameObject npc, TextAsset txt)
 	{
 		npc.GetComponent<NPCTalkScript>().changeDialogue(txt);
 	}
 
-	public static void uploadDialogue(int index, GameObject npc)
+	public static void UploadDialogue(int index, GameObject npc)
 	{
 		TextAsset textTemp = new TextAsset();
+		//Debug.Log("sono dentro nell'indice " + index);
+		textTemp = Resources.Load<TextAsset>("Dialoghi/" + index);
+		ChangeDialogue(npc, textTemp);
+		
+
+
+		/*
 		switch (index)
 		{
 			case 1:
@@ -68,6 +75,6 @@ public class DialogueContentManagerScript : MonoBehaviour
 				textTemp = Resources.Load<TextAsset>("Dialoghi/8");
 				changeDialogue(npc, textTemp);
 				break;
-		}
+		}*/
 	}
 }
